@@ -1,0 +1,14 @@
+{
+  "name": "nicolaiwebpage",
+  "version": "1.0.0",
+  "description": "Responsive web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Nicolai Michelet",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
