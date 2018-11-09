@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import 'mobile';
 
 *{
   box-sizing: border-box;
@@ -53,9 +54,10 @@ h1, h2, h3 {
 
     .icons {
       margin-top: 1rem;
+      margin-left: 0.5rem;
 
       a{
-        padding: 0.4rem;
+        padding: 0.6rem;
         &:hover {
           color: $secondary-color;
           @include easeOut();
