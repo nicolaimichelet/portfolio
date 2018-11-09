@@ -2,21 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+
+
     <link rel="stylesheet"
           href="css/main.css">
     <title>Welcome to my Portfolio</title>
 </head>
-<body>
+<body id="bg-img">
 
-    <h1>Nicolai Michelet</h1>
+<header>
+    <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+    </div>
 
-    <ul class="menu">
-        <a href=""><li>Home</li></a>
-        <a href=""><li>About</li></a>
-        <a href=""><li>Projects</li></a>
-        <a href=""><li>Contact</li></a>
+    <div class="menu"></div>
+    <div class="branding">
+        <div class="portrait"></div>
+    </div>
+    <ul class="menu-nav">'
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="pages/about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="pages/projects.html" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a href="pages/contact.html" class="nav-link">Contact</a>
+        </li>
+    </ul>
+</header>
+
+    <main id="home">
+        <h1 class="home-heading">Nicolai <span class="text-secondary">Michelet</span></h1>
+        <h2 class="description">Software developer, Progammer & Composer</h2>
+        <div class="icons">
+            <a target="_blank" href="https://www.linkedin.com/in/nicolai-michelet/">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://github.com/nicolaimichelet">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://soundcloud.com/nicmicmusic">
+                <i class="fab fa-soundcloud fa-2x"></i>
+            </a>
+        </div>
+    </main>
+
+
+    <ul class="navigation">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="pages/about.html">About</a>
+        </li>
+        <li>
+            <a href="pages/projects.html">Projects</a>
+        </li>
+        <li>
+            <a href="pages/contact.html">Contact</a>
+        </li>
     </ul>
 
+<script src="js/main.js"></script>
 
 </body>
 </html>
