@@ -56,7 +56,7 @@
       height: 250px;
       background: url("../img/portrait3.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a;
+      border: solid 3px #68AEFD;
       opacity: 1; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -64,7 +64,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #68AEFD; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #68AEFD; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -90,31 +90,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .home-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav, div.branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show, div.branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 9vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -124,15 +99,19 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background-size: cover; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/winter.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
+      background-size: cover;
+      -webkit-background-size: cover;
+      margin: 0 auto;
       right: 0;
       width: 100%;
       height: 100%;
@@ -160,20 +139,189 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #68AEFD; }
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 55px); }
   main .icons {
     margin-top: 1rem;
     margin-left: 0.5rem; }
     main .icons a {
       padding: 0.6rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #68AEFD;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'trait1 trait2 trait3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  border-radius: 50%;
+  border: #68AEFD 3px solid; }
+
+.bio {
+  grid-area: bio;
+  background: #515151;
+  padding: 0.5rem; }
+
+.trait1 {
+  grid-area: trait1; }
+
+.trait2 {
+  grid-area: trait2; }
+
+.trait3 {
+  grid-area: trait3; }
+
+.trait {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #68AEFD 5px solid; }
+
+.aboutIcon {
+  text-align: center; }
+
+.gridHeader {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 40px;
+  color: #68AEFD; }
+
+.bioHeader {
+  font-size: 40px;
+  color: #68AEFD; }
+
+li {
+  font-size: 1.4em;
+  margin-bottom: 2rem; }
+
+p {
+  font-size: 1.4em; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch; }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #68AEFD;
+      transition: all 0.5s ease-out; }
+  .projects .musicWebsitePic {
+    opacity: 0.5; }
+  .projects .item {
+    position: relative; }
+  .projects .musicText {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    color: #68AEFD;
+    background-color: #515151;
+    padding: 0.5rem 0.4rem 0.4rem 0.5rem;
+    border: 3px #fff solid; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 1rem 1rem;
+      background: #68AEFD; }
+      .boxes div:hover span {
+        color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  display: inline-block; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #68AEFD;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #aaaaaa;
+  color: #333; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  heigth: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); }
+  .musicText {
+    font-size: 1rem; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .home-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .musicText {
+    font-size: 1.5rem; }
+  ul.menu-nav, div.branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'trait1' 'trait2' 'trait3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 9vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
